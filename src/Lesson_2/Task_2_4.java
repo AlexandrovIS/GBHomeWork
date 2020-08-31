@@ -3,13 +3,12 @@ package Lesson_2;
 public class Task_2_4 {
     public static void main(String[] args) {
 
-        int[][] table = new int[10][10];
+        int[][] table = new int[5][5];
 
         for (int i = 0; i < table.length; i++) {
             for (int j = 0; j < table.length; j++) {
-                if(i+j== table.length-1 || i==j)
-                {
-                    table[i][j]=1;
+                if (i + j == table.length - 1 || i == j) {
+                    table[i][j] = 1;
                 }
 
                 System.out.print(table[i][j] + " ");
@@ -19,3 +18,7 @@ public class Task_2_4 {
         }
     }
 }
+
+
+
+
