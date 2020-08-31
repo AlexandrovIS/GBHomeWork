@@ -68,29 +68,25 @@ public class TicTacToe {
         map[y][x]=DOT_O;
     }
     public static boolean checkWin(char symb){
+        for (int i = 0 ; i < SIZE; i++) {
 
-
-
-        int summD1=0;int summD2=0;int summL1=0;int summL2=0;int summL3=0;
-//        int summV1=0;int summV2=0;int summV3=0;
-        for (int i = 0; i <SIZE ; i++) {
-            for (int j = 0; j <SIZE ; j++) {
-                if (i==j ||i+j==SIZE-1){
-                    if(map[i][j]==symb) summD1++;
-                }
-                if (i+j==SIZE-1){
-                    if(map[i][j]==symb) summD2++;
-                }
-                if(i==0&& 0<=j&&j<SIZE){if(map[i][j]==symb)summL1++;}
-                if(i==1&& 0<=j&&j<SIZE){if(map[i][j]==symb)summL2++;}
-                if(i==2&& 0<=j&&j<SIZE){if(map[i][j]==symb)summL3++;}
-
-            }if(summD1==DOTS_TO_WIN||summD2==DOTS_TO_WIN
-                ||summL1==DOTS_TO_WIN||summL2==DOTS_TO_WIN||summL3==DOTS_TO_WIN
-//                ||summV1==DOTS_TO_WIN||summV2==DOTS_TO_WIN||summV3==DOTS_TO_WIN
-            ){return true;};
         }
 
+
+        int summD=0;int summD2=0;
+        if(map[0][0]==symb&&map[0][1]==symb&&map[0][2]==symb)return true;
+        if(map[1][0]==symb&&map[1][1]==symb&&map[1][2]==symb)return true;
+        if(map[2][0]==symb&&map[2][1]==symb&&map[2][2]==symb)return true;
+        if(map[0][0]==symb&&map[1][0]==symb&&map[2][0]==symb)return true;
+        if(map[0][1]==symb&&map[1][1]==symb&&map[2][1]==symb)return true;
+        if(map[0][2]==symb&&map[1][2]==symb&&map[2][2]==symb)return true;
+
+        for (int i = 0; i <SIZE ; i++) {
+            for (int j = 0; j <SIZE ; j++) {
+                if(i==j&&map[i][j]==symb )summD++;
+                if(i+j==SIZE-1&&map[i][j]==symb)summD2++;
+            }
+        }if(summD==DOTS_TO_WIN||summD2==DOTS_TO_WIN)return true;
         return false;
     }
 
