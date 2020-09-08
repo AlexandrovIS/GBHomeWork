@@ -22,11 +22,18 @@ public class Dog extends Animal{
         return false;
     }
 
-    private void printDogInfo(){
-        System.out.println("Dog name "+getName()+" age "+getAge()+" run "+getRun()+ " jump "+getJump()+" swim "+getSwim());
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "Name="+getName()+
+                ", age="+getAge()+
+                ", run="+getRun()+
+                ", jump="+getJump()+
+                ", swim="+getSwim()+
+                ", MaxRun=" + maxRun() +
+                ", MaxJump=" + maxJump() +
+                ", MaxSwim=" + maxSwim() +
+                '}';
     }
-    public void printDogResult(){
-        printDogInfo();
-        System.out.println("Dog "+ getName()+" have a next result" +" run: " + maxRun()+" jump: "+maxJump()+" swim: "+maxSwim());
-    }
+
 }

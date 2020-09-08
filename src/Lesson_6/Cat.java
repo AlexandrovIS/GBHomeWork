@@ -18,11 +18,17 @@ public class Cat extends Animal{
         return false;
     }
 
-    private void printCatInfo(){
-        System.out.println("Cat name "+getName()+" age "+getAge()+" run "+getRun()+ " jump "+getJump()+" swim "+getSwim());
-    }
-    public void printCatResult(){
-        printCatInfo();
-        System.out.println("Cat "+ getName()+" have a next result" +" run: " + maxRun()+" jump: "+maxJump()+" swim: "+MaxSwim);
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "Name="+getName()+
+                ", age="+getAge()+
+                ", run="+getRun()+
+                ", jump="+getJump()+
+                ", swim="+getSwim()+
+                ", MaxRun=" + maxRun() +
+                ", MaxJump=" + maxJump() +
+                ", MaxSwim=" + MaxSwim +
+                '}';
     }
 }

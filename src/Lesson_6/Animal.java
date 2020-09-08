@@ -1,6 +1,6 @@
 package Lesson_6;
 
-public class Animal<MAX_RUN> {
+public class Animal {
     private String name;
     private int age;
     private int run;
@@ -31,8 +31,6 @@ public class Animal<MAX_RUN> {
         this.swim = swim;
     }
 
-
-
     public String getName() {
         return name;
     }
@@ -55,5 +53,18 @@ public class Animal<MAX_RUN> {
         this.run = run;
         this.jump = jump;
         this.swim = swim;
+    }
+    public void printInfo(){
+        System.out.println(toString());
+    }
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", run=" + run +
+                ", jump=" + jump +
+                ", swim=" + swim +
+                '}';
     }
 }

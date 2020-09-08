@@ -7,10 +7,12 @@ public class MainAnimals {
         Dog dog2=new Dog("SedondDog",10,700,0.3,20);
         Cat cat1=new Cat("FirstCat",7,200,2,0);
         Cat cat2=new Cat("SecondCat",4,300,0.5,10);
-        dog1.printDogResult();
-        dog2.printDogResult();
-        cat1.printCatResult();
-        cat2.printCatResult();
+
+
+        dog1.printInfo();
+        dog2.printInfo();
+        cat1.printInfo();
+        cat2.printInfo();
     }
 
 }
